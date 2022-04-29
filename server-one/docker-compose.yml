@@ -1,0 +1,14 @@
+version: "3"
+services:
+    server-one:
+      image: library/nginx:stable
+      container_name: server-one
+      ports:
+        - "8088:80"
+      networks:
+        - api
+
+networks:
+    api:
+        external: true
+        name: reworth_api_network

@@ -1,0 +1,14 @@
+version: "3"
+services:
+    server-two:
+      image: library/nginx:stable
+      container_name: server-two
+      ports:
+        - "8090:80"
+      networks:
+          - reworth_api_network
+networks:
+    reworth_api_network:
+        external: true
+
+
